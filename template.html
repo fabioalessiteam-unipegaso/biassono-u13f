@@ -199,6 +199,7 @@ html.js .gblock[hidden]{display:none}
     <div class="editbar">
       <button type="button" class="btn alt" id="icsBtn">📅 Aggiungi al calendario (.ics)</button>
       <button type="button" class="btn alt" id="pdfBtn">🖨️ Scarica PDF</button>
+      <button type="button" class="btn alt" id="installBtn" hidden>📲 Installa l'app</button>
     </div>
     <section class="list" id="list" aria-label="Partite"></section>
   </section>
@@ -456,19 +457,52 @@ show(location.hash==='#girone'?'girone':'calendario');
 showG(curG);
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 
+/* ---------- Installa come app ---------- */
+(function(){
+  const btn=document.getElementById('installBtn');
+  if(!btn)return;
+  const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  const isStandalone=window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  let deferredPrompt=null;
+  window.addEventListener('beforeinstallprompt',e=>{
+    e.preventDefault();
+    deferredPrompt=e;
+    btn.hidden=false;
+  });
+  if(isIOS && !isStandalone)btn.hidden=false;
+  btn.addEventListener('click',async()=>{
+    if(deferredPrompt){
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt=null;
+      btn.hidden=true;
+    }else if(isIOS){
+      alert('Per installare: tocca il pulsante Condividi (il quadrato con la freccia in alto), poi "Aggiungi alla schermata Home".');
+    }
+  });
+  window.addEventListener('appinstalled',()=>{btn.hidden=true});
+})();
+
 /* ---------- Contatore visite (max 1 al giorno per dispositivo) ---------- */
 (function(){
   const box=document.getElementById('visitsBox');
   if(!box)return;
   const today=new Date().toISOString().slice(0,10);
   const key='biassono-visit-'+today;
+  const badgeUrl='https://visitor-badge.laobi.icu/badge?page_id=fabioalessiteam-unipegaso.biassono-u13f';
   let counted=false;
   try{ counted=localStorage.getItem(key)==='1'; }catch(e){}
   if(counted){
-    box.textContent='conteggiata oggi ✓';
+    const a=document.createElement('a');
+    a.href=badgeUrl;
+    a.target='_blank';
+    a.rel='noopener';
+    a.className='maploc';
+    a.textContent='conteggiata oggi · vedi il totale';
+    box.appendChild(a);
   }else{
     const img=document.createElement('img');
-    img.src='https://visitor-badge.laobi.icu/badge?page_id=fabioalessiteam-unipegaso.biassono-u13f';
+    img.src=badgeUrl;
     img.alt='contatore visite';
     img.style.verticalAlign='middle';
     img.style.height='16px';
