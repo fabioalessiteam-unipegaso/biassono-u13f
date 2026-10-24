@@ -26,9 +26,9 @@ def nome_squadra(s):
     return re.sub(r"^PALL\.\s+", "", s.strip())
 
 def bel_campo(v):
-    """'Palazzetto - Via Caravaggio snc LISSONE (MB)' -> 'CASA' oppure testo leggibile."""
+    """'palestra Comunale Brenno - Via Parco ang. via Brenno BIASSONO (MB)' -> 'CASA' oppure testo leggibile."""
     v = re.sub(r"\s+", " ", v).strip()
-    if "Palazzetto" in v and "Caravaggio" in v:
+    if "Brenno" in v and "BIASSONO" in v:
         return "CASA"
     v = v.replace("Marmolada(ang.via monte am", "Marmolada (ang. via Monte Amiata)")
     v = re.sub(r"\s*\(MB\)\s*$", "", v)
