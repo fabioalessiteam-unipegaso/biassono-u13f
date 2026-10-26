@@ -351,7 +351,7 @@ html.js .gblock[hidden] { display: none; }
       <button type="button" class="btn alt" id="pdfBtn">🖨️ Scarica PDF</button>
       <button type="button" class="btn alt" id="installBtn">📲 Installa l'app</button>
     </div>
-    <section class="list" id="list" aria-label="Partite"><article class="match next"><div class="date"><span class="dow">dom</span><span class="day">25</span><span class="mon">ott</span><span class="time">11:15</span></div>
+    <section class="list" id="list" aria-label="Partite"><article class="match"><div class="date"><span class="dow">dom</span><span class="day">25</span><span class="mon">ott</span><span class="time">11:15</span></div>
     <div class="body">
       
     <div class="row">
@@ -367,14 +367,14 @@ html.js .gblock[hidden] { display: none; }
       <div class="foot">
         <span class="tag">Trasferta</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=Palestra%20%C2%B7%20Via%20Longoni%20%C2%B7%20fraz%20Robbiano%2C%20Giussano" target="_blank" rel="noopener">Palestra · Via Longoni · fraz Robbiano, Giussano</a>
-        <span class="nextflag">Prossima</span>
+        
         
         <button type="button" class="icsone" data-gara="15065" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15065" title="Condividi" aria-label="Condividi">📤</button>
       </div>
-      <div class="foot" style="margin-top:2px"><span class="meteo" id="meteo"></span></div>
+      
       <div class="foot" style="margin-top:2px"><span>Gara 15065</span></div>
-    </div></article><article class="match"><div class="date"><span class="dow">dom</span><span class="day">1</span><span class="mon">nov</span><span class="time">10:00</span></div>
+    </div></article><article class="match next"><div class="date"><span class="dow">dom</span><span class="day">1</span><span class="mon">nov</span><span class="time">10:00</span></div>
     <div class="body">
       
     <div class="row">
@@ -390,12 +390,12 @@ html.js .gblock[hidden] { display: none; }
       <div class="foot">
         <span class="tag">Trasferta</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=PALESTRA%20DI%20VALLE%20OLONA%20%C2%B7%20P.le%20Don%20Gabbani%20VARESE%20(VA)" target="_blank" rel="noopener">PALESTRA DI VALLE OLONA · P.le Don Gabbani VARESE (VA)</a>
-        
+        <span class="nextflag">Prossima</span>
         
         <button type="button" class="icsone" data-gara="15068" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15068" title="Condividi" aria-label="Condividi">📤</button>
       </div>
-      
+      <div class="foot" style="margin-top:2px"><span class="meteo" id="meteo"></span></div>
       <div class="foot" style="margin-top:2px"><span>Gara 15068</span></div>
     </div></article><article class="match home"><div class="date"><span class="dow">sab</span><span class="day">7</span><span class="mon">nov</span><span class="time">17:30</span></div>
     <div class="body">
@@ -1232,7 +1232,7 @@ document.getElementById('upd').textContent=AGGIORNATO?('Ultimo aggiornamento: '+
     const p=document.createElement('p');
     p.className='upd';
     p.style.cssText='color:var(--loss);font-weight:600';
-    p.textContent=`⚠️ Nessun aggiornamento da ${giorni} giorni: potrebbe esserci un problema, controlla su GitHub (Actions).`;
+    p.textContent=`⚠️ Nessun aggiornamento da ${giorni} giorni: probabilmente la FIP non ha ancora pubblicato i dati più recenti. Il sito si aggiorna da solo non appena saranno disponibili.`;
     document.getElementById('upd').insertAdjacentElement('afterend',p);
   }
 })();
