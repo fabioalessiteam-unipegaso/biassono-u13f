@@ -286,6 +286,16 @@ html.js .gblock[hidden] { display: none; }
 .icsone:hover { border-color: var(--blue); color: var(--blue-light); }
 .icsone:focus-visible { outline: 3px solid var(--court); outline-offset: 1px; }
 
+/* POSIZIONE IN CLASSIFICA (riepilogo in fondo al Calendario) */
+.standing-mini { display:flex; align-items:center; gap:14px; background:var(--surface); border:1px solid var(--line2); border-radius:var(--radius-md); padding:14px 18px; margin:4px 0 0; text-decoration:none; color:inherit; position:relative; overflow:hidden; }
+.standing-mini::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--blue),var(--court)); }
+.standing-mini:hover { border-color:var(--blue); }
+.standing-mini .pos { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; line-height:1; color:var(--blue-light); flex:none; }
+.standing-mini .info { flex:1; min-width:0; }
+.standing-mini .info b { display:block; font-size:14.5px; }
+.standing-mini .info span { font-size:12.5px; color:var(--muted); }
+.standing-mini .arrow { flex:none; color:var(--muted); font-size:20px; }
+
 /* FADE IN */
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 .hero { animation: fadeUp 0.4s ease both; }
@@ -302,7 +312,7 @@ html.js .gblock[hidden] { display: none; }
   body { background:#fff; color:#111; font-size:12px; }
   .wrap { max-width:none; padding:0; }
   body::before, body::after { display:none; }
-  .tabs, .editbar, .icsone, .nextflag { display:none !important; }
+  .tabs, .editbar, .icsone, .nextflag, .standing-mini { display:none !important; }
   html.js .view[hidden] { display:block; }
   html.js .gblock[hidden] { display:block; }
   .gsel { display:none; }
@@ -351,7 +361,7 @@ html.js .gblock[hidden] { display: none; }
       <button type="button" class="btn alt" id="pdfBtn">🖨️ Scarica PDF</button>
       <button type="button" class="btn alt" id="installBtn">📲 Installa l'app</button>
     </div>
-    <section class="list" id="list" aria-label="Partite"><article class="match next"><div class="date"><span class="dow">dom</span><span class="day">25</span><span class="mon">ott</span><span class="time">11:15</span></div>
+    <section class="list" id="list" aria-label="Partite"><article class="match"><div class="date"><span class="dow">dom</span><span class="day">25</span><span class="mon">ott</span><span class="time">11:15</span></div>
     <div class="body">
       
     <div class="row">
@@ -367,14 +377,14 @@ html.js .gblock[hidden] { display: none; }
       <div class="foot">
         <span class="tag">Trasferta</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=Palestra%20%C2%B7%20Via%20Longoni%20%C2%B7%20fraz%20Robbiano%2C%20Giussano" target="_blank" rel="noopener">Palestra · Via Longoni · fraz Robbiano, Giussano</a>
-        <span class="nextflag">Prossima</span>
+        
         
         <button type="button" class="icsone" data-gara="15065" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15065" title="Condividi" aria-label="Condividi">📤</button>
       </div>
-      <div class="foot" style="margin-top:2px"><span class="meteo" id="meteo"></span></div>
+      
       <div class="foot" style="margin-top:2px"><span>Gara 15065</span></div>
-    </div></article><article class="match"><div class="date"><span class="dow">dom</span><span class="day">1</span><span class="mon">nov</span><span class="time">10:00</span></div>
+    </div></article><article class="match next"><div class="date"><span class="dow">dom</span><span class="day">1</span><span class="mon">nov</span><span class="time">10:00</span></div>
     <div class="body">
       
     <div class="row">
@@ -390,12 +400,12 @@ html.js .gblock[hidden] { display: none; }
       <div class="foot">
         <span class="tag">Trasferta</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=PALESTRA%20DI%20VALLE%20OLONA%20%C2%B7%20P.le%20Don%20Gabbani%20VARESE%20(VA)" target="_blank" rel="noopener">PALESTRA DI VALLE OLONA · P.le Don Gabbani VARESE (VA)</a>
-        
+        <span class="nextflag">Prossima</span>
         
         <button type="button" class="icsone" data-gara="15068" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15068" title="Condividi" aria-label="Condividi">📤</button>
       </div>
-      
+      <div class="foot" style="margin-top:2px"><span class="meteo" id="meteo"></span></div>
       <div class="foot" style="margin-top:2px"><span>Gara 15068</span></div>
     </div></article><article class="match home"><div class="date"><span class="dow">sab</span><span class="day">7</span><span class="mon">nov</span><span class="time">17:30</span></div>
     <div class="body">
@@ -582,6 +592,7 @@ html.js .gblock[hidden] { display: none; }
       
       <div class="foot" style="margin-top:2px"><span>Gara 15092</span></div>
     </div></article></section>
+    <a class="standing-mini" id="standingMini" href="#girone"></a>
   </section>
 
   <section class="view" id="girone">
@@ -1189,6 +1200,15 @@ rows.forEach((t,i)=>{
     <td class="pt"><span class="ptpill">${t.pt}</span></td>`;
   cb.appendChild(tr);
 });
+(function(){
+  const el=document.getElementById('standingMini');
+  if(!el)return;
+  const idx=rows.findIndex(t=>t.n==='BASKET FEMM.BIASSONO');
+  if(idx<0)return;
+  const t=rows[idx];
+  const d=t.df>0?`+${t.df}`:(t.df<0?`−${Math.abs(t.df)}`:'0');
+  el.innerHTML=`<span class="pos">${idx+1}°</span><span class="info"><b>${idx+1}° posto su ${rows.length} · ${t.pt} punti</b><span>${t.v}V ${t.p}P · ${d}</span></span><span class="arrow">›</span>`;
+})();
 
 /* ---------- Risultati e gare del girone, giornata per giornata ---------- */
 const lab=k=>k<=5?`${k}ª giornata di andata`:`${k-5}ª giornata di ritorno`;
@@ -1248,6 +1268,8 @@ function show(which){
 }
 tCal.addEventListener('click',e=>{e.preventDefault();show('calendario')});
 tGir.addEventListener('click',e=>{e.preventDefault();show('girone')});
+const standingMini=document.getElementById('standingMini');
+if(standingMini)standingMini.addEventListener('click',e=>{e.preventDefault();show('girone')});
 show(location.hash==='#girone'?'girone':'calendario');
 showG(curG);
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
