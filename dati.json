@@ -112,6 +112,17 @@
   },
   {
    "g": 4,
+   "n": 15074,
+   "a": "BASKET FOXES GIUSSANO",
+   "b": "VARESE BASKET SCHOOL",
+   "d": "2026-11-15",
+   "t": "11:00",
+   "pa": null,
+   "pb": null,
+   "v": "Palestra Comunale Nelson Mande · Via Circonvallazione Ovest LAINATE (MI)"
+  },
+  {
+   "g": 4,
    "n": 15075,
    "a": "SPORTIVA SONDRIO",
    "b": "PRO PATRIA BUSTO",
@@ -120,17 +131,6 @@
    "pa": null,
    "pb": null,
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
-  },
-  {
-   "g": 4,
-   "n": 15074,
-   "a": "BASKET FOXES GIUSSANO",
-   "b": "VARESE BASKET SCHOOL",
-   "d": "2026-11-15",
-   "t": "11:15",
-   "pa": null,
-   "pb": null,
-   "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
   },
   {
    "g": 5,
@@ -331,5 +331,5 @@
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   }
  ],
- "aggiornato": "27 ottobre 2026, 17:11"
+ "aggiornato": "28 ottobre 2026, 17:58"
 }
