@@ -18,8 +18,8 @@
    "b": "BASKET FEMM.BIASSONO",
    "d": "2026-10-25",
    "t": "11:15",
-   "pa": null,
-   "pb": null,
+   "pa": 102,
+   "pb": 32,
    "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
   },
   {
@@ -29,8 +29,8 @@
    "b": "VARESE BASKET SCHOOL",
    "d": "2026-10-25",
    "t": "14:00",
-   "pa": null,
-   "pb": null,
+   "pa": 40,
+   "pb": 42,
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   },
   {
@@ -331,5 +331,5 @@
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   }
  ],
- "aggiornato": "28 ottobre 2026, 17:58"
+ "aggiornato": "30 ottobre 2026, 17:56"
 }

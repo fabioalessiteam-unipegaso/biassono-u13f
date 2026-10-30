@@ -342,9 +342,9 @@ html.js .gblock[hidden] { display: none; }
   <section class="view" id="calendario">
     <section class="stats" aria-label="Riepilogo">
       <div class="stat"><b id="sV">0</b><span>Vinte</span></div>
-      <div class="stat"><b id="sP">0</b><span>Perse</span></div>
-      <div class="stat"><b id="sF">0</b><span>Punti fatti</span></div>
-      <div class="stat"><b id="sS">0</b><span>Punti subiti</span></div>
+      <div class="stat"><b id="sP">1</b><span>Perse</span></div>
+      <div class="stat"><b id="sF">32</b><span>Punti fatti</span></div>
+      <div class="stat"><b id="sS">102</b><span>Punti subiti</span></div>
     </section>
     <div class="editbar">
       <button type="button" class="btn alt" id="icsBtn">📅 Aggiungi al calendario (.ics)</button>
@@ -357,19 +357,19 @@ html.js .gblock[hidden] { display: none; }
     <div class="row">
       <div class="crest ro"><img src="loghi/foxes-giussano.png" alt="Stemma BASKET FOXES GIUSSANO"></div>
       <div class="team">BASKET FOXES GIUSSANO</div>
-      <div class="score ro" aria-label="Punti BASKET FOXES GIUSSANO"></div>
+      <div class="score ro win" aria-label="Punti BASKET FOXES GIUSSANO">102</div>
     </div>
     <div class="row">
       <div class="crest ro"><img src="loghi/biassono.png" alt="Stemma BASKET FEMM.BIASSONO"></div>
       <div class="team us">BASKET FEMM.BIASSONO</div>
-      <div class="score ro" aria-label="Punti BASKET FEMM.BIASSONO"></div>
+      <div class="score ro" aria-label="Punti BASKET FEMM.BIASSONO">32</div>
     </div>
       <div class="foot">
         <span class="tag">Trasferta</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=Palestra%20%C2%B7%20Via%20Longoni%20%C2%B7%20fraz%20Robbiano%2C%20Giussano" target="_blank" rel="noopener">Palestra · Via Longoni · fraz Robbiano, Giussano</a>
         
+        <span class="res l">Persa</span>
         
-        <button type="button" class="icsone" data-gara="15065" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15065" title="Condividi" aria-label="Condividi">📤</button>
       </div>
       
@@ -623,8 +623,8 @@ const GARE = [
   "b": "BASKET FEMM.BIASSONO",
   "d": "2026-10-25",
   "t": "11:15",
-  "pa": null,
-  "pb": null,
+  "pa": 102,
+  "pb": 32,
   "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
  },
  {
@@ -634,8 +634,8 @@ const GARE = [
   "b": "VARESE BASKET SCHOOL",
   "d": "2026-10-25",
   "t": "14:00",
-  "pa": null,
-  "pb": null,
+  "pa": 40,
+  "pb": 42,
   "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
  },
  {
@@ -937,7 +937,7 @@ const GARE = [
  }
 ];
 const GIORNATA_DATA = {"1": "2026-10-25", "2": "2026-11-01", "3": "2026-11-08", "4": "2026-11-15", "5": "2026-11-22", "6": "2026-11-29", "7": "2026-12-06", "8": "2026-12-13", "9": "2027-01-10", "10": "2027-01-17"};
-const AGGIORNATO = "28 ottobre 2026, 17:58";
+const AGGIORNATO = "30 ottobre 2026, 17:56";
 /* Loghi (facoltativo): cartella "loghi" accanto a index.html, es. 'BASKET FEMM.BIASSONO': 'loghi/biassono.png' */
 const LOGHI = {
   'BASKET FEMM.BIASSONO': 'loghi/biassono.png',
