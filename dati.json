@@ -2,17 +2,6 @@
  "gare": [
   {
    "g": 1,
-   "n": 15064,
-   "a": "PRO PATRIA BUSTO",
-   "b": "BASKET OLGIATE COMASCO ASD",
-   "d": "2026-10-23",
-   "t": "19:15",
-   "pa": null,
-   "pb": null,
-   "v": "PALAFERRINI · Via Ferrini BUSTO ARSIZIO (VA)"
-  },
-  {
-   "g": 1,
    "n": 15065,
    "a": "BASKET FOXES GIUSSANO",
    "b": "BASKET FEMM.BIASSONO",
@@ -32,6 +21,17 @@
    "pa": 40,
    "pb": 42,
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
+  },
+  {
+   "g": 1,
+   "n": 15064,
+   "a": "PRO PATRIA BUSTO",
+   "b": "BASKET OLGIATE COMASCO ASD",
+   "d": "2026-10-25",
+   "t": "19:15",
+   "pa": 20,
+   "pb": 0,
+   "v": "PALAFERRINI · Via Ferrini BUSTO ARSIZIO (VA)"
   },
   {
    "g": 2,
@@ -331,5 +331,5 @@
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   }
  ],
- "aggiornato": "30 ottobre 2026, 17:56"
+ "aggiornato": "31 ottobre 2026, 16:57"
 }
