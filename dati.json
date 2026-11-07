@@ -35,17 +35,6 @@
   },
   {
    "g": 2,
-   "n": 15069,
-   "a": "BASKET OLGIATE COMASCO ASD",
-   "b": "SPORTIVA SONDRIO",
-   "d": "2026-10-31",
-   "t": "17:00",
-   "pa": null,
-   "pb": null,
-   "v": "PALESTRA COMUNALE · Via Tarchini 19 OLGIATE COMASCO (CO)"
-  },
-  {
-   "g": 2,
    "n": 15068,
    "a": "VARESE BASKET SCHOOL",
    "b": "BASKET FEMM.BIASSONO",
@@ -62,9 +51,20 @@
    "b": "PRO PATRIA BUSTO",
    "d": "2026-11-01",
    "t": "11:00",
-   "pa": null,
-   "pb": null,
+   "pa": 65,
+   "pb": 30,
    "v": "PALESTRA SC.ELEMENTARI · Via Roma / Via L.da Vinci NERVIANO (MI)"
+  },
+  {
+   "g": 2,
+   "n": 15069,
+   "a": "BASKET OLGIATE COMASCO ASD",
+   "b": "SPORTIVA SONDRIO",
+   "d": "2026-11-01",
+   "t": "17:00",
+   "pa": 60,
+   "pb": 61,
+   "v": "PALESTRA COMUNALE · Via Tarchini 19 OLGIATE COMASCO (CO)"
   },
   {
    "g": 3,
@@ -331,5 +331,5 @@
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   }
  ],
- "aggiornato": "31 ottobre 2026, 16:57"
+ "aggiornato": "7 novembre 2026, 17:44"
 }
