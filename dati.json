@@ -40,8 +40,8 @@
    "b": "BASKET FEMM.BIASSONO",
    "d": "2026-11-01",
    "t": "10:00",
-   "pa": null,
-   "pb": null,
+   "pa": 104,
+   "pb": 14,
    "v": "PALESTRA DI VALLE OLONA · P.le Don Gabbani VARESE (VA)"
   },
   {
@@ -79,25 +79,25 @@
   },
   {
    "g": 3,
-   "n": 15072,
-   "a": "BASKET FEMM.BIASSONO",
-   "b": "SPORTIVA SONDRIO",
-   "d": "2026-11-07",
-   "t": "17:30",
-   "pa": null,
-   "pb": null,
-   "v": "CASA"
-  },
-  {
-   "g": 3,
    "n": 15071,
    "a": "BASKET FOXES GIUSSANO",
    "b": "BASKET OLGIATE COMASCO ASD",
    "d": "2026-11-08",
    "t": "11:15",
-   "pa": null,
-   "pb": null,
+   "pa": 89,
+   "pb": 40,
    "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
+  },
+  {
+   "g": 3,
+   "n": 15072,
+   "a": "BASKET FEMM.BIASSONO",
+   "b": "SPORTIVA SONDRIO",
+   "d": "2026-11-08",
+   "t": "17:30",
+   "pa": 41,
+   "pb": 71,
+   "v": "CASA"
   },
   {
    "g": 4,
@@ -331,5 +331,5 @@
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   }
  ],
- "aggiornato": "7 novembre 2026, 17:44"
+ "aggiornato": "13 novembre 2026, 19:22"
 }
