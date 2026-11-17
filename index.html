@@ -420,7 +420,7 @@ html.js .gblock[hidden] { display: none; }
       </div>
       
       <div class="foot" style="margin-top:2px"><span>Gara 15072</span></div>
-    </div></article><article class="match home next"><div class="date"><span class="dow">sab</span><span class="day">14</span><span class="mon">nov</span><span class="time">17:30</span></div>
+    </div></article><article class="match home"><div class="date"><span class="dow">sab</span><span class="day">14</span><span class="mon">nov</span><span class="time">17:30</span></div>
     <div class="body">
       
     <div class="row">
@@ -436,14 +436,14 @@ html.js .gblock[hidden] { display: none; }
       <div class="foot">
         <span class="tag">Casa</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=Palestra%20Comunale%20Brenno%20%C2%B7%20Via%20Parco%20ang.%20via%20Brenno%2C%20Biassono" target="_blank" rel="noopener">Palestra Comunale Brenno · Via Parco ang. via Brenno, Biassono</a>
-        <span class="nextflag">Prossima</span>
+        
         
         <button type="button" class="icsone" data-gara="15073" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15073" title="Condividi" aria-label="Condividi">📤</button>
       </div>
-      <div class="foot" style="margin-top:2px"><span class="meteo" id="meteo"></span></div>
+      
       <div class="foot" style="margin-top:2px"><span>Gara 15073</span></div>
-    </div></article><article class="match"><div class="date"><span class="dow">sab</span><span class="day">21</span><span class="mon">nov</span><span class="time">17:00</span></div>
+    </div></article><article class="match next"><div class="date"><span class="dow">sab</span><span class="day">21</span><span class="mon">nov</span><span class="time">17:00</span></div>
     <div class="body">
       
     <div class="row">
@@ -459,12 +459,12 @@ html.js .gblock[hidden] { display: none; }
       <div class="foot">
         <span class="tag">Trasferta</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=PALARIOSTO%20%C2%B7%20Via%20L.%20Ariosto%203%20BUSTO%20ARSIZIO%20(VA)" target="_blank" rel="noopener">PALARIOSTO · Via L. Ariosto 3 BUSTO ARSIZIO (VA)</a>
-        
+        <span class="nextflag">Prossima</span>
         
         <button type="button" class="icsone" data-gara="15076" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15076" title="Condividi" aria-label="Condividi">📤</button>
       </div>
-      
+      <div class="foot" style="margin-top:2px"><span class="meteo" id="meteo"></span></div>
       <div class="foot" style="margin-top:2px"><span>Gara 15076</span></div>
     </div></article><article class="match home"><div class="date"><span class="dow">sab</span><span class="day">28</span><span class="mon">nov</span><span class="time">17:30</span></div>
     <div class="body">
@@ -937,7 +937,7 @@ const GARE = [
  }
 ];
 const GIORNATA_DATA = {"1": "2026-10-25", "2": "2026-11-01", "3": "2026-11-08", "4": "2026-11-15", "5": "2026-11-22", "6": "2026-11-29", "7": "2026-12-06", "8": "2026-12-13", "9": "2027-01-10", "10": "2027-01-17"};
-const AGGIORNATO = "13 novembre 2026, 19:22";
+const AGGIORNATO = "17 novembre 2026, 14:47";
 /* Loghi (facoltativo): cartella "loghi" accanto a index.html, es. 'BASKET FEMM.BIASSONO': 'loghi/biassono.png' */
 const LOGHI = {
   'BASKET FEMM.BIASSONO': 'loghi/biassono.png',
@@ -1231,8 +1231,8 @@ document.getElementById('upd').textContent=AGGIORNATO?('Ultimo aggiornamento: '+
   if(giorni>=2){
     const p=document.createElement('p');
     p.className='upd';
-    p.style.cssText='color:var(--loss);font-weight:600';
-    p.textContent=`⚠️ Nessun aggiornamento da ${giorni} giorni: probabilmente la FIP non ha ancora pubblicato i dati più recenti. Il sito si aggiorna da solo non appena saranno disponibili.`;
+    p.style.cssText='color:var(--muted)';
+    p.textContent=`Nessun aggiornamento da ${giorni} giorni: probabilmente la FIP non ha ancora pubblicato i dati più recenti. Il sito si aggiorna da solo non appena saranno disponibili.`;
     document.getElementById('upd').insertAdjacentElement('afterend',p);
   }
 })();
