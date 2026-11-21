@@ -68,17 +68,6 @@
   },
   {
    "g": 3,
-   "n": 15070,
-   "a": "PRO PATRIA BUSTO",
-   "b": "VARESE BASKET SCHOOL",
-   "d": "2026-11-07",
-   "t": "17:00",
-   "pa": null,
-   "pb": null,
-   "v": "PALARIOSTO · Via L. Ariosto 3 BUSTO ARSIZIO (VA)"
-  },
-  {
-   "g": 3,
    "n": 15071,
    "a": "BASKET FOXES GIUSSANO",
    "b": "BASKET OLGIATE COMASCO ASD",
@@ -87,6 +76,17 @@
    "pa": 89,
    "pb": 40,
    "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
+  },
+  {
+   "g": 3,
+   "n": 15070,
+   "a": "PRO PATRIA BUSTO",
+   "b": "VARESE BASKET SCHOOL",
+   "d": "2026-11-08",
+   "t": "17:00",
+   "pa": 24,
+   "pb": 75,
+   "v": "PALARIOSTO · Via L. Ariosto 3 BUSTO ARSIZIO (VA)"
   },
   {
    "g": 3,
@@ -106,8 +106,8 @@
    "b": "BASKET OLGIATE COMASCO ASD",
    "d": "2026-11-14",
    "t": "17:30",
-   "pa": null,
-   "pb": null,
+   "pa": 39,
+   "pb": 93,
    "v": "CASA"
   },
   {
@@ -117,8 +117,8 @@
    "b": "VARESE BASKET SCHOOL",
    "d": "2026-11-15",
    "t": "11:00",
-   "pa": null,
-   "pb": null,
+   "pa": 49,
+   "pb": 75,
    "v": "Palestra Comunale Nelson Mande · Via Circonvallazione Ovest LAINATE (MI)"
   },
   {
@@ -128,20 +128,9 @@
    "b": "PRO PATRIA BUSTO",
    "d": "2026-11-15",
    "t": "11:00",
-   "pa": null,
-   "pb": null,
+   "pa": 52,
+   "pb": 42,
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
-  },
-  {
-   "g": 5,
-   "n": 15077,
-   "a": "BASKET OLGIATE COMASCO ASD",
-   "b": "VARESE BASKET SCHOOL",
-   "d": "2026-11-18",
-   "t": "19:30",
-   "pa": null,
-   "pb": null,
-   "v": "PALESTRA COMUNALE · Via Tarchini 19 OLGIATE COMASCO (CO)"
   },
   {
    "g": 5,
@@ -164,6 +153,17 @@
    "pa": null,
    "pb": null,
    "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
+  },
+  {
+   "g": 5,
+   "n": 15077,
+   "a": "BASKET OLGIATE COMASCO ASD",
+   "b": "VARESE BASKET SCHOOL",
+   "d": "2026-11-22",
+   "t": "19:30",
+   "pa": 57,
+   "pb": 74,
+   "v": "PALESTRA COMUNALE · Via Tarchini 19 OLGIATE COMASCO (CO)"
   },
   {
    "g": 6,
@@ -331,5 +331,5 @@
    "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
   }
  ],
- "aggiornato": "13 novembre 2026, 19:22"
+ "aggiornato": "21 novembre 2026, 18:52"
 }

@@ -342,9 +342,9 @@ html.js .gblock[hidden] { display: none; }
   <section class="view" id="calendario">
     <section class="stats" aria-label="Riepilogo">
       <div class="stat"><b id="sV">0</b><span>Vinte</span></div>
-      <div class="stat"><b id="sP">3</b><span>Perse</span></div>
-      <div class="stat"><b id="sF">87</b><span>Punti fatti</span></div>
-      <div class="stat"><b id="sS">277</b><span>Punti subiti</span></div>
+      <div class="stat"><b id="sP">4</b><span>Perse</span></div>
+      <div class="stat"><b id="sF">126</b><span>Punti fatti</span></div>
+      <div class="stat"><b id="sS">370</b><span>Punti subiti</span></div>
     </section>
     <div class="editbar">
       <button type="button" class="btn alt" id="icsBtn">📅 Aggiungi al calendario (.ics)</button>
@@ -426,19 +426,19 @@ html.js .gblock[hidden] { display: none; }
     <div class="row">
       <div class="crest ro"><img src="loghi/biassono.png" alt="Stemma BASKET FEMM.BIASSONO"></div>
       <div class="team us">BASKET FEMM.BIASSONO</div>
-      <div class="score ro" aria-label="Punti BASKET FEMM.BIASSONO"></div>
+      <div class="score ro" aria-label="Punti BASKET FEMM.BIASSONO">39</div>
     </div>
     <div class="row">
       <div class="crest ro"><img src="loghi/olgiate-comasco.png" alt="Stemma BASKET OLGIATE COMASCO ASD"></div>
       <div class="team">BASKET OLGIATE COMASCO ASD</div>
-      <div class="score ro" aria-label="Punti BASKET OLGIATE COMASCO ASD"></div>
+      <div class="score ro win" aria-label="Punti BASKET OLGIATE COMASCO ASD">93</div>
     </div>
       <div class="foot">
         <span class="tag">Casa</span>
         <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=Palestra%20Comunale%20Brenno%20%C2%B7%20Via%20Parco%20ang.%20via%20Brenno%2C%20Biassono" target="_blank" rel="noopener">Palestra Comunale Brenno · Via Parco ang. via Brenno, Biassono</a>
         
+        <span class="res l">Persa</span>
         
-        <button type="button" class="icsone" data-gara="15073" title="Aggiungi questa partita al calendario" aria-label="Aggiungi questa partita al calendario">📅</button>
         <button type="button" class="icsone share" data-gara="15073" title="Condividi" aria-label="Condividi">📤</button>
       </div>
       
@@ -673,17 +673,6 @@ const GARE = [
  },
  {
   "g": 3,
-  "n": 15070,
-  "a": "PRO PATRIA BUSTO",
-  "b": "VARESE BASKET SCHOOL",
-  "d": "2026-11-07",
-  "t": "17:00",
-  "pa": null,
-  "pb": null,
-  "v": "PALARIOSTO · Via L. Ariosto 3 BUSTO ARSIZIO (VA)"
- },
- {
-  "g": 3,
   "n": 15071,
   "a": "BASKET FOXES GIUSSANO",
   "b": "BASKET OLGIATE COMASCO ASD",
@@ -692,6 +681,17 @@ const GARE = [
   "pa": 89,
   "pb": 40,
   "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
+ },
+ {
+  "g": 3,
+  "n": 15070,
+  "a": "PRO PATRIA BUSTO",
+  "b": "VARESE BASKET SCHOOL",
+  "d": "2026-11-08",
+  "t": "17:00",
+  "pa": 24,
+  "pb": 75,
+  "v": "PALARIOSTO · Via L. Ariosto 3 BUSTO ARSIZIO (VA)"
  },
  {
   "g": 3,
@@ -711,8 +711,8 @@ const GARE = [
   "b": "BASKET OLGIATE COMASCO ASD",
   "d": "2026-11-14",
   "t": "17:30",
-  "pa": null,
-  "pb": null,
+  "pa": 39,
+  "pb": 93,
   "v": "CASA"
  },
  {
@@ -722,8 +722,8 @@ const GARE = [
   "b": "VARESE BASKET SCHOOL",
   "d": "2026-11-15",
   "t": "11:00",
-  "pa": null,
-  "pb": null,
+  "pa": 49,
+  "pb": 75,
   "v": "Palestra Comunale Nelson Mande · Via Circonvallazione Ovest LAINATE (MI)"
  },
  {
@@ -733,20 +733,9 @@ const GARE = [
   "b": "PRO PATRIA BUSTO",
   "d": "2026-11-15",
   "t": "11:00",
-  "pa": null,
-  "pb": null,
+  "pa": 52,
+  "pb": 42,
   "v": "PalaScieghiPini · Via Aldo Moro 27 SONDRIO (SO)"
- },
- {
-  "g": 5,
-  "n": 15077,
-  "a": "BASKET OLGIATE COMASCO ASD",
-  "b": "VARESE BASKET SCHOOL",
-  "d": "2026-11-18",
-  "t": "19:30",
-  "pa": null,
-  "pb": null,
-  "v": "PALESTRA COMUNALE · Via Tarchini 19 OLGIATE COMASCO (CO)"
  },
  {
   "g": 5,
@@ -769,6 +758,17 @@ const GARE = [
   "pa": null,
   "pb": null,
   "v": "Palestra · Via Longoni · fraz Robbiano, Giussano"
+ },
+ {
+  "g": 5,
+  "n": 15077,
+  "a": "BASKET OLGIATE COMASCO ASD",
+  "b": "VARESE BASKET SCHOOL",
+  "d": "2026-11-22",
+  "t": "19:30",
+  "pa": 57,
+  "pb": 74,
+  "v": "PALESTRA COMUNALE · Via Tarchini 19 OLGIATE COMASCO (CO)"
  },
  {
   "g": 6,
@@ -937,7 +937,7 @@ const GARE = [
  }
 ];
 const GIORNATA_DATA = {"1": "2026-10-25", "2": "2026-11-01", "3": "2026-11-08", "4": "2026-11-15", "5": "2026-11-22", "6": "2026-11-29", "7": "2026-12-06", "8": "2026-12-13", "9": "2027-01-10", "10": "2027-01-17"};
-const AGGIORNATO = "17 novembre 2026, 14:47";
+const AGGIORNATO = "21 novembre 2026, 18:52";
 /* Loghi (facoltativo): cartella "loghi" accanto a index.html, es. 'BASKET FEMM.BIASSONO': 'loghi/biassono.png' */
 const LOGHI = {
   'BASKET FEMM.BIASSONO': 'loghi/biassono.png',
